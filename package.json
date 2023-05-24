@@ -1,0 +1,12 @@
+{
+  "name": "qf-types",
+  "version": "1.0.0",
+  "description": "Global package for about interfaces, types.",
+  "main": "index.ts",
+  "repository": "https://git.ali33.ru/s4z/qf-types.git",
+  "author": "0xJS",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
