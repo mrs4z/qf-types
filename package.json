@@ -10,7 +10,7 @@
     ".": {
       "import": "./dist/index.js"
     }
-  }
+  },
   "repository": "https://git.ali33.ru/s4z/qf-types.git",
   "author": "0xJS",
   "license": "MIT",
