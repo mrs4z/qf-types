@@ -1,1 +1,1 @@
-import './interfaces/IUsers';
+export * from './interfaces/IUsers';
