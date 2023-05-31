@@ -10,7 +10,7 @@ interface QF_IFetchStockResponse {
 }
 
 export const QF_StockCommands = {
-    
+
     /**
      * Запрос к АПИ для получения списка акций
      * @param fields QF_StockFields[]
@@ -25,7 +25,9 @@ export const QF_StockCommands = {
             QF_StockFields.MARKET_ID
         ]
     ): Promise<QF_IStock[]> => {
-        const { data, error } = await fetchApi<QF_IFetchStockResponse>(QF_StockCommandsApi.GET_STOCKS, fields);
+        const { data, error } = await fetchApi<QF_IFetchStockResponse>(QF_StockCommandsApi.GET_STOCKS, {
+            fields
+        });
 
         if(error) {
             return [];
