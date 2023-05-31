@@ -21,6 +21,7 @@ interface FetchBaseConfig<T> {
     config: FetchBaseConfig<Record<string, string>> = baseConfig
   ): Promise<FetchResult<T>> {
     try {
+        console.log(body);
       const response = await fetch(config.baseURL, {
         method: 'POST',
         headers: config.headers,
