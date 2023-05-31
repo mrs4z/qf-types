@@ -1,9 +1,5 @@
-export * from './interfaces/IUsers';
+// interfaces
+export * from './interfaces/IStock';
 
-export function sayHello(name: string) {
-    return `Hey ${name}, say hello to TypeScript.`;
-}
-
-export default {
-    resultItem: () => console.log("FUCK GROM INDEX TSD")
-}
+// plugins
+export * from './plugins/fetchApi'
