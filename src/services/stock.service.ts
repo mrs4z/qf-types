@@ -2,10 +2,10 @@ import { QF_IStock, QF_StockFields } from "../interfaces/IStock";
 import fetchApi from "../plugins/fetchApi";
 
 enum QF_StockCommandsApi {
-    GET_STOCKS = 'getStocks'
+    GET_STOCKS = 'getTickers'
 }
 
-interface QF_IFetchStockResponse {
+export interface QF_IFetchStockResponse {
     stocks: QF_IStock[]
 }
 
@@ -26,7 +26,10 @@ export const QF_StockCommands = {
         ]
     ): Promise<QF_IStock[]> => {
         const { data, error } = await fetchApi<QF_IFetchStockResponse>(QF_StockCommandsApi.GET_STOCKS, {
-            fields
+            fields,
+            conditions: {
+                type: 0
+            }
         });
 
         if(error) {
@@ -36,3 +39,12 @@ export const QF_StockCommands = {
         return data?.stocks || [];
     }
 }
+
+
+// const QF_StockBaseQuery = ({
+//     fields: [
+        
+//     ]
+// }) => {
+
+// }

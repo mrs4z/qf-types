@@ -1,4 +1,7 @@
 import { QF_IStock, QF_StockFields } from "../interfaces/IStock";
+export interface QF_IFetchStockResponse {
+    stocks: QF_IStock[];
+}
 export declare const QF_StockCommands: {
     /**
      * Запрос к АПИ для получения списка акций

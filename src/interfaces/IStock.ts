@@ -1,3 +1,10 @@
+/**
+ * ABOUT STOCK INTERFACES
+ */
+
+/**
+ * BASE FIELDS
+ */
 export enum QF_StockFields {
     ID = 'id',
     NAME = 'name',
@@ -6,6 +13,7 @@ export enum QF_StockFields {
     ROUND = 'round'
 }
 
+/** STOCK STRUCT */
 export interface QF_IStock {
     [QF_StockFields.ID]: number;
     [QF_StockFields.NAME]: string;
