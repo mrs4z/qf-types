@@ -22,6 +22,8 @@ interface FetchBaseConfig<T> {
   ): Promise<FetchResult<T>> {
     try {
         console.log(body);
+        console.log('========= COMMAND ==========');
+        console.log(command)
       const response = await fetch(config.baseURL, {
         method: 'POST',
         headers: config.headers,
