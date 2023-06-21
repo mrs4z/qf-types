@@ -9,7 +9,8 @@ export declare enum QF_StockFields {
     NAME = "name",
     TICKER_NAME = "ticker_name",
     MARKET_ID = "market_id",
-    ROUND = "round"
+    ROUND = "round",
+    PRICE = "price"
 }
 /** STOCK STRUCT */
 export interface QF_IStock {
@@ -18,4 +19,5 @@ export interface QF_IStock {
     [QF_StockFields.TICKER_NAME]: string;
     [QF_StockFields.MARKET_ID]: number;
     [QF_StockFields.ROUND]: number;
+    [QF_StockFields.PRICE]: number;
 }
