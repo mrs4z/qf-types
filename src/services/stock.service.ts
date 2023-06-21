@@ -6,7 +6,7 @@ enum QF_StockCommandsApi {
 }
 
 export interface QF_IFetchStockResponse {
-    stocks: QF_IStock[]
+    tickers: QF_IStock[]
 }
 
 export const QF_StockCommands = {
@@ -36,7 +36,7 @@ export const QF_StockCommands = {
             return [];
         }
 
-        return data?.stocks || [];
+        return data?.tickers || [];
     }
 }
 
